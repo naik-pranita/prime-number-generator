@@ -37,7 +37,7 @@ describe('App', () => {
         try {
             getAllPrimeNumbersInRange(3,Infinity);
         } catch(e) {
-            expect(e.message).toEqual('nvalid input types, please enter numeric values only');
+            expect(e.message).toEqual('Invalid input types, please enter numeric values only');
         }
     });
     
