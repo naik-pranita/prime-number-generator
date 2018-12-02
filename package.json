@@ -1,0 +1,16 @@
+{
+	"name": "prime-number-generator",
+	"version": "1.0.0",
+	"main": "app.js",
+	"author": "pnaik93 <pnaik93@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"babel-core": "6.26.3",
+		"babel-jest": "23.6.0",
+		"babel-preset-env": "1.7.0",
+		"jest": "23.6.0"
+	}
+}
