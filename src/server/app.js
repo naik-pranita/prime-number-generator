@@ -33,24 +33,28 @@ const isPrime = num => {
 	for (let i = 1; i <= num; i++) {
 		if (num % i === 0) {
 			count++;
-        }
-        if (count > 2) {
-            return false;
-        }
-    }
-    
+		}
+		if (count > 2) {
+			return false;
+		}
+	}
+
 	return true;
 };
 
 const getAllPrimeNumbersInRange = (start, end) => {
-	if (isValidInput(start, end)) {
-		let result = [];
-		for (let i = start; i <= end; i++) {
-			if (isPrime(i)) {
-				result.push(i);
+	try {
+		if (isValidInput(start, end)) {
+			let result = [];
+			for (let i = start; i <= end; i++) {
+				if (isPrime(i)) {
+					result.push(i);
+				}
 			}
+			return result;
 		}
-		return result;
+	} catch (e) {
+		return e.message;
 	}
 };
 
