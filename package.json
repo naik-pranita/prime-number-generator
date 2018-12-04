@@ -1,16 +1,35 @@
 {
 	"name": "prime-number-generator",
 	"version": "1.0.0",
-	"main": "app.js",
+	"main": "src/index.js",
 	"author": "pnaik93 <pnaik93@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"test": "jest"
+		"test": "jest",
+		"start": "node src/server",
+		"build": "webpack --mode=production",
+		"build:dev": "webpack --watch"
 	},
 	"devDependencies": {
 		"babel-core": "6.26.3",
 		"babel-jest": "23.6.0",
+		"babel-loader": "7.0.0",
+		"babel-polyfill": "6.26.0",
 		"babel-preset-env": "1.7.0",
-		"jest": "23.6.0"
+		"babel-preset-react": "6.24.1",
+		"babel-register": "6.26.0",
+		"jest": "23.6.0",
+		"node-sass": "4.10.0",
+		"sass-loader": "7.1.0",
+		"style-loader": "0.23.1",
+		"webpack": "4.26.1",
+		"webpack-cli": "3.1.2"
+	},
+	"dependencies": {
+		"axios": "0.18.0",
+		"css-loader": "^1.0.1",
+		"express": "4.16.4",
+		"react": "16.6.3",
+		"react-dom": "16.6.3"
 	}
 }
