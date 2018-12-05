@@ -20,8 +20,13 @@ export default class PrimeNumberForm extends React.Component {
 	}
 
 	onClick(e) {
-        e.preventDefault();
-		this.props.onSubmit({ start: this.state.start, end: this.state.end });
+		if (this.state.start && this.state.end) {
+			e.preventDefault();
+			this.props.onSubmit({
+				start: this.state.start,
+				end: this.state.end
+			});
+		}
 	}
 
 	render() {
@@ -38,6 +43,7 @@ export default class PrimeNumberForm extends React.Component {
 								className="input"
 								value={this.state.start}
 								onChange={this.onChange}
+								required
 							/>
 						</div>
 						<div className="form-control">
@@ -49,6 +55,7 @@ export default class PrimeNumberForm extends React.Component {
 								className="input"
 								value={this.state.end}
 								onChange={this.onChange}
+								required
 							/>
 						</div>
 					</div>

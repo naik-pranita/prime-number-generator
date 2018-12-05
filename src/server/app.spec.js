@@ -1,11 +1,11 @@
 import getAllPrimeNumbersInRange from './app'; 
 
 describe('App', () => {
-	it('should throw exception when non integer input is passed', () => {
+    it('should throw exception when non integer input is passed', () => {
         try {
             getAllPrimeNumbersInRange(null,null);
         } catch(e) {
-            expect(e.message).toEqual('Invalid input types, please enter numeric values only');
+            expect(e.message).toEqual('Invalid input types, please enter numeric values only!');
         }
     });
     
@@ -13,7 +13,7 @@ describe('App', () => {
         try {
             getAllPrimeNumbersInRange(0,1);
         } catch(e) {
-            expect(e.message).toEqual('Invalid input types, please enter numeric values greater than one only');
+            expect(e.message).toEqual('Invalid input types, please enter numeric values greater than one only!');
         }
     });
     
@@ -21,7 +21,7 @@ describe('App', () => {
         try {
             getAllPrimeNumbersInRange(-5,0);
         } catch(e) {
-            expect(e.message).toEqual('Invalid input types, please enter numeric values greater than one only');
+            expect(e.message).toEqual('Invalid input types, please enter numeric values greater than one only!');
         }
     });
      
@@ -29,7 +29,7 @@ describe('App', () => {
         try {
             getAllPrimeNumbersInRange(10,4);
         } catch(e) {
-            expect(e.message).toEqual('Start value must be greater than end value');
+            expect(e.message).toEqual('Start value must be greater than end value!');
         }
     });
      
@@ -37,7 +37,7 @@ describe('App', () => {
         try {
             getAllPrimeNumbersInRange(3,Infinity);
         } catch(e) {
-            expect(e.message).toEqual('Invalid input types, please enter numeric values only');
+            expect(e.message).toEqual('Invalid input types, please enter numeric values only!');
         }
     });
     
